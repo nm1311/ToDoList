@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'App_toDoList/css/main.css'%}" type="text/css">
+    </head>
+
+    <body>
+
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>To-Do List</h1>
+                </div>
+                <div class="col-md-3">
+                    <span class="glyphicon glyphicon-th-list glyph"></span>
+                </div>
+            </div>
+        </div>
+
+
+        {% block content %}
+        {% endblock %}
+
+
+    </body>
+
+
+
+</html>

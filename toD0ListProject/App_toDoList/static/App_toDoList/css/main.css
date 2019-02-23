@@ -1,0 +1,43 @@
+body{
+    background: #aeb7ca
+}
+
+.page-header{
+    background: #2757c0;
+    margin-top: 0px;
+    color: white;
+}
+
+.page-header h1 {
+    font-family: 'Lobster';
+    font-size: 50px;
+    margin: 5px 0px 5px 440px;
+    padding: 5px 0px 5px 5px;
+
+}
+
+.glyph{
+    font-size: 50px;
+    margin: 5px 0px 0px 5px;
+    padding: 5px 0px 0px 5px;
+}
+
+.list-group-item{
+    font-size: 22px;
+}
+
+.delbuttoncontainer{
+    margin-bottom: 10px;
+}
+
+.delbuttoncontainer button{
+    border: none;
+}
+
+.list-group a:link, .list-group a:visited, .list-group a:hover, .list-group a:active {
+    color: black;
+}
+
+.itemcomplete{
+    color: #da9d9d
+}

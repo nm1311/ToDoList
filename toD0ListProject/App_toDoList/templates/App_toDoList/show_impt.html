@@ -1,0 +1,66 @@
+{% extends 'App_toDoList/base.html' %}
+
+{% block content %}
+
+
+
+    <div class="container">
+            <div class="row delbuttoncontainer">
+
+                <div class="col-md-3">
+                    <a href="{% url 'index'%}"><button type="button" class="btn-lg btn-danger">
+                        <span class="glyphicon glyphicon-home"></span> Go Back Home</button></a>
+                </div>
+
+            
+            </div>  
+    </div>
+    
+
+    <div class="container">
+        <ul class="list-group">
+            {% for item in items%}
+                {% if item.is_complete%}
+                    <li class="list-group-item itemcomplete">
+                            <div class="row">
+        
+                                <div class="col-md-11">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                    {{ item.item_name}}
+                                </div>
+        
+                                <div class="col-md-1">
+                                    <a href="{% url 'delete_item' pk=item.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </div>
+        
+                            </div>
+                        
+                    </li>
+
+                {% else %}
+                    <a href="{% url 'item_complete' pk=item.pk %}" class="listatag"><li class="list-group-item">
+                        <div class="row">
+
+                            <div class="col-md-11">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                {{ item.item_name}}
+                            </div>
+
+                            <div class="col-md-1">
+                                <a href="{% url 'delete_item' pk=item.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                                <span class="glyphicon glyphicon-star"></span>
+                            </div>
+
+                        </div>
+                    
+                    </li></a>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+
+{% endblock %}
