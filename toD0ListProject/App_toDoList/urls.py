@@ -11,5 +11,6 @@ urlpatterns = [
     path('/mark_impt/<int:pk>', views.mark_impt, name='mark_impt'),
     path('/show_impt', views.show_impt, name='show_impt'),
     path('/remove_impt/<int:pk>', views.remove_impt, name='remove_impt'),
+    path('/delete_item_from_impt/<int:pk>', views.delete_item_from_impt, name='delete_item_from_impt'),
 
 ]

@@ -28,8 +28,12 @@ def item_complete(request, pk):
 
 def delete_item(request,pk):
     Todolist.objects.get(pk=pk).delete()
-
     return redirect('index')
+
+def delete_item_from_impt(request,pk):
+    Todolist.objects.get(pk=pk).delete()
+    return redirect('show_impt')
+
 
 def delete_completed(request):
     Todolist.objects.filter(is_complete=True).delete()
